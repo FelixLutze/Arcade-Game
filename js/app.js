@@ -1,5 +1,7 @@
-const lives = document.querySelector('.lives');
-const score = document.querySelector('.score');
+const livesDisplay = document.querySelector('.lives');
+const scoreDisplay = document.querySelector('.score');
+let score = 0;
+let lifes = 5;
 
 // enemies our player must avoid
 var Enemy = function(x, y, speed) {
@@ -16,17 +18,23 @@ var Enemy = function(x, y, speed) {
 // updates the enemy's position
 Enemy.prototype.update = function(dt) {
     // dt parameter ensures that the game runs at the same speed for all computers.
-    this.x += this.speed * dt;
+    this.x += this.speed * dt;    
 
     // resets the enemy position
     if(this.x > 530) {
         this.x = -120;
     }
 
+
+
     // checking for collision
     if (player.x < this.x + 50 && player.x + 35 > this.x && player.y < this.y + 25 && 30 + player.y > this.y) {
         player.x = 200;
-        player.y = 380;
+        player.y = 375;
+        
+        // life decreased by 1
+        lifes--;
+        livesDisplay.textContent = lifes;
     }
 };
 
@@ -52,12 +60,11 @@ Player.prototype.render = function() {
 Player.prototype.handleInput = function(keyCode) {
     console.log(keyCode);
 
-    // checks for player reaching top of canvas and winning the game
+    // checks for player reaching top of canvas
     if (this.y > 0) {   
         if(keyCode == 'up') {
             this.y -= 85;
             console.log('y: ' + this.y);
-            
         }
     }
     // checks for player reaching bottom of canvas
