@@ -1,7 +1,10 @@
 const livesDisplay = document.querySelector('.lives');
-const scoreDisplay = document.querySelector('.score');
+const allScoreDisplay = document.querySelectorAll('.score');
+const gameOverMain = document.querySelector('.game-over-main');
+const restartGame = document.querySelector('.restart');
 let score = 0;
 let lifes = 5;
+const waterPoints = 25;
 
 // enemies our player must avoid
 var Enemy = function(x, y, speed) {
@@ -24,8 +27,6 @@ Enemy.prototype.update = function(dt) {
     if(this.x > 530) {
         this.x = -120;
     }
-
-
 
     // checking for collision
     if (player.x < this.x + 50 && player.x + 35 > this.x && player.y < this.y + 25 && 30 + player.y > this.y) {
@@ -89,6 +90,28 @@ Player.prototype.handleInput = function(keyCode) {
         }
     }
 };
+
+Player.prototype.updateScore = function(waterPoints) {
+    // increasing score
+    score += waterPoints;
+    
+    for(const scoreDisplay of allScoreDisplay) {
+        scoreDisplay.textContent = score;
+    }
+
+    // resets player position
+    player.x = 200;
+    player.y = 375;
+}
+
+// setting up the game over screen
+function gameOver() {
+    gameOverMain.style.display = 'flex';
+}
+
+restartGame.addEventListener('click', function() {
+    location.reload();
+});
 
 // places all enemy objects in an array
 var allEnemies = [];

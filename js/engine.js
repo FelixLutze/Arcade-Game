@@ -94,15 +94,15 @@ var Engine = (function(global) {
             
         });
 
-        // checks if the player went through
+        // checks if the player reaches the water
         if(player.y == -50) {
             // increasing score
-            score++;
-            scoreDisplay.textContent = score;
+            player.updateScore(waterPoints);
+        }
 
-            // resets player position
-            player.x = 200;
-            player.y = 375;
+        // calling gameOver() if the player has no lifes left.
+        if(lifes <= 0) {
+            gameOver();
         }
     }
 
