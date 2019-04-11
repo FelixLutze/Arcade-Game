@@ -1,11 +1,44 @@
 body {
     text-align: center;
+    font-family: 'Coda', cursive;
 }
 
 .span-lives {
-    margin-right: 10px;
+    margin-right: 40px;
 }
 
 .span-score {
-    margin-left: 10px;
+    margin-left: 40px;
 }
+
+/*
+* Styles for the game over screen
+*/
+
+.game-over-main {
+    background: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .game-over-content {
+    font-size: 1.5em;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .game-over-content div {
+    cursor: pointer;
+    padding: 10px;
+    margin: 30px auto;
+    width: 250px;
+    border-radius: 10px;
+    background-color: #02ccba;
+    color: white;
+    font-weight: bold;
+    box-shadow: 10px 10px 134px -70px rgba(0,0,0,0.75);
+  }
