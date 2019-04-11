@@ -4,11 +4,15 @@ body {
 }
 
 .span-lives {
-    margin-right: 40px;
+    margin-right: 90px;
 }
 
 .span-score {
-    margin-left: 40px;
+    margin-left: 90px;
+}
+
+.score-main {
+    font-size: 1.5em;
 }
 
 /*
