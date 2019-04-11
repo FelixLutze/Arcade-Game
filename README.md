@@ -1,6 +1,6 @@
 # Arcade Game
 
-The goal of the game is to control a figure without colliding with the bugs. You control the figure with the arrow keys of your keyboard. The player will get a reward in points once he reaches the water. If you get hit 5 times, a game over screen will appear to Display your Score. Written in HTML, CSS and JavaScript.
+The goal of the game is to control a figure without colliding with any bugs. You control the figure with the arrow keys of your keyboard. The player will get a reward in points once he reaches the water. If you get hit 5 times, a game over screen will appear to Display your Score. Written in HTML, CSS and JavaScript.
 
 ## Getting Started
 
