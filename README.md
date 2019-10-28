@@ -6,7 +6,6 @@ You control the figure with the arrow keys of your keyboard.
 Once the player reaches the water, the game score increases.
 
 If you collide with a bug for the fifth time, a game over screen will appear to display the final score. 
-Written in HTML, CSS and JavaScript.
 
 ## Getting Started
 
