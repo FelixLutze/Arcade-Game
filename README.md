@@ -16,7 +16,7 @@ You can also play it locally by downloading the project.
 
 ### Prerequisites
 
-A modern web browser is recommended to support the JavaScript and HTML used in the app.
+A modern web browser is recommended to support the JavaScript and HTML used by the game.
 
 ## Demo
 
