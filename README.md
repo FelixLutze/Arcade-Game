@@ -1,17 +1,23 @@
 # Arcade Game
 
-The goal of the game is to control a figure without colliding with any bugs. You control the figure with the arrow keys of your keyboard. The player will get a reward in points once the water is reached. If you get hit 5 times, a game over screen will appear to display the final score. Written in HTML, CSS and JavaScript.
+The goal of the game is to control a character without colliding with any bugs. 
+You control the figure with the arrow keys of your keyboard. 
+
+Once the player reaches the water, the game score increases.
+
+If you collide with a bug for the fifth time, a game over screen will appear to display the final score. 
+Written in HTML, CSS and JavaScript.
 
 ## Getting Started
 
-Try out the live version https://dev.felixlutze.net/arcade-game/
+Try out the live version at https://dev.felixlutze.net/arcade-game/
 
 
 You can also play it locally by downloading the project.
 
 ### Prerequisites
 
-I recomend a modern Browser like chrome or firefox to run it properly.
+A modern web browser is recommended to support the JavaScript and HTML used in the app.
 
 ## Demo
 
